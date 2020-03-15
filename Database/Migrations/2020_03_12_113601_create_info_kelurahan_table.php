@@ -15,7 +15,7 @@ class CreateInfoKelurahanTable extends Migration
     {
         Schema::create('info_kelurahan', function (Blueprint $table) {
             $table->char('id_kelurahan', 10)->primary();
-            $table->string('nama_kelurahan', 30);
+            $table->string('nama_kelurahan', 100);
             $table->char('kode_pos', 5);
             $table->char('id_kecamatan', 7);
         });
