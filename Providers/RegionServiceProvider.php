@@ -19,6 +19,9 @@ class RegionServiceProvider extends ServiceProvider
         $this->registerViews();
         $this->registerFactories();
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
+        $this->commands([
+            \Gdevilbat\SpardaCMS\Modules\Region\Console\RegionMigrateCommand::class,
+        ]);
     }
 
     /**
