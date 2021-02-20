@@ -15,9 +15,9 @@ class RegionDatabaseSeeder extends Seeder
     public function run()
     {
         Model::unguard();
-        $this->call(ProvinsiSeeder::class);
+        /*$this->call(ProvinsiSeeder::class);
         $this->call(KabupatenSeeder::class);
         $this->call(KecamatanSeeder::class);
-        $this->call(KelurahanSeeder::class);
+        $this->call(KelurahanSeeder::class);*/
     }
 }
