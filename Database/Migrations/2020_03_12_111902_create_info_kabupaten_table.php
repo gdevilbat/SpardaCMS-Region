@@ -16,11 +16,11 @@ class CreateInfoKabupatenTable extends Migration
         Schema::create('info_kabupaten', function (Blueprint $table) {
             $table->char('id_kabupaten', 4)->primary();
             $table->string('nama_kabupaten', 30);
-            $table->char('id_provinsi', 2);
+            $table->char('provinsi_id', 2);
         });
 
         Schema::table('info_kabupaten', function($table){
-            $table->foreign('id_provinsi')->references('id_provinsi')->on('info_provinsi')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('provinsi_id')->references('id_provinsi')->on('info_provinsi')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

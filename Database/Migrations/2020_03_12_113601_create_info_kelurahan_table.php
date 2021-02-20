@@ -17,11 +17,11 @@ class CreateInfoKelurahanTable extends Migration
             $table->char('id_kelurahan', 10)->primary();
             $table->string('nama_kelurahan', 100);
             $table->char('kode_pos', 5);
-            $table->char('id_kecamatan', 7);
+            $table->char('kecamatan_id', 7);
         });
 
         Schema::table('info_kelurahan', function($table){
-            $table->foreign('id_kecamatan')->references('id_kecamatan')->on('info_kecamatan')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('kecamatan_id')->references('id_kecamatan')->on('info_kecamatan')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
