@@ -8,5 +8,18 @@ class Provinsi extends Model
 {
     protected $fillable = ['id_provinsi', 'nama_provinsi'];
     protected $table = 'info_provinsi';
+    protected $primaryKey = 'id_provinsi';
     public $timestamps = false;
+
+    const FOREIGN_KEY = 'provinsi_id';
+
+    final static function getTableName()
+    {
+        return with(new Static)->getTable();
+    }
+
+    final static function getPrimaryKey()
+    {
+        return with(new Static)->getKeyName();
+    }
 }
