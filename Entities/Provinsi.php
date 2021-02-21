@@ -13,6 +13,11 @@ class Provinsi extends Model
 
     const FOREIGN_KEY = 'provinsi_id';
 
+    public function kabupatens()
+    {
+        return $this->hasMany(Kabupaten::class, SELF::FOREIGN_KEY);
+    }
+
     final static function getTableName()
     {
         return with(new Static)->getTable();

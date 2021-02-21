@@ -13,6 +13,11 @@ class Kecamatan extends Model
 
     const FOREIGN_KEY = 'kecamatan_id';
 
+    public function kelurahans()
+    {
+        return $this->hasMany(Kelurahan::class, SELF::FOREIGN_KEY);
+    }
+
     final static function getTableName()
     {
         return with(new Static)->getTable();
