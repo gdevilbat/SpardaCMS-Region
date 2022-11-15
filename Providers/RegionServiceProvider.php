@@ -58,7 +58,7 @@ class RegionServiceProvider extends ServiceProvider
     {
         $viewPath = resource_path('views/modules/region');
 
-        $sourcePath = __DIR__.'/../resources/views';
+        $sourcePath = __DIR__.'/../Resources/views';
 
         $this->publishes([
             $sourcePath => $viewPath
@@ -81,7 +81,7 @@ class RegionServiceProvider extends ServiceProvider
         if (is_dir($langPath)) {
             $this->loadTranslationsFrom($langPath, 'region');
         } else {
-            $this->loadTranslationsFrom(__DIR__ .'/../resources/lang', 'region');
+            $this->loadTranslationsFrom(__DIR__ .'/../Resources/lang', 'region');
         }
     }
 
